@@ -14,6 +14,11 @@
 		946345541AE2B1B40084F8FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946345531AE2B1B40084F8FF /* Images.xcassets */; };
 		946345571AE2B1B40084F8FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946345551AE2B1B40084F8FF /* LaunchScreen.xib */; };
 		946345631AE2B1B40084F8FF /* ImageInpainting_GITTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345621AE2B1B40084F8FF /* ImageInpainting_GITTests.m */; };
+		946345711AE2B66E0084F8FF /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345701AE2B66E0084F8FF /* MainView.m */; };
+		946345741AE2B6BE0084F8FF /* PixelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345731AE2B6BE0084F8FF /* PixelInfo.m */; };
+		946345771AE2B6D80084F8FF /* DistanceLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345761AE2B6D80084F8FF /* DistanceLegacy.m */; };
+		9463457A1AE2B6EB0084F8FF /* ImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345791AE2B6EB0084F8FF /* ImageHandler.m */; };
+		9463457D1AE2B6FC0084F8FF /* SelectedRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9463457C1AE2B6FC0084F8FF /* SelectedRegion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		9463455C1AE2B1B40084F8FF /* ImageInpainting_GITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageInpainting_GITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		946345611AE2B1B40084F8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946345621AE2B1B40084F8FF /* ImageInpainting_GITTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageInpainting_GITTests.m; sourceTree = "<group>"; };
+		9463456F1AE2B66E0084F8FF /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		946345701AE2B66E0084F8FF /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		946345721AE2B6BE0084F8FF /* PixelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixelInfo.h; sourceTree = "<group>"; };
+		946345731AE2B6BE0084F8FF /* PixelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PixelInfo.m; sourceTree = "<group>"; };
+		946345751AE2B6D80084F8FF /* DistanceLegacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceLegacy.h; sourceTree = "<group>"; };
+		946345761AE2B6D80084F8FF /* DistanceLegacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceLegacy.m; sourceTree = "<group>"; };
+		946345781AE2B6EB0084F8FF /* ImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandler.h; sourceTree = "<group>"; };
+		946345791AE2B6EB0084F8FF /* ImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHandler.m; sourceTree = "<group>"; };
+		9463457B1AE2B6FC0084F8FF /* SelectedRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedRegion.h; sourceTree = "<group>"; };
+		9463457C1AE2B6FC0084F8FF /* SelectedRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedRegion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,16 @@
 				946345531AE2B1B40084F8FF /* Images.xcassets */,
 				946345551AE2B1B40084F8FF /* LaunchScreen.xib */,
 				946345461AE2B1B30084F8FF /* Supporting Files */,
+				9463456F1AE2B66E0084F8FF /* MainView.h */,
+				946345701AE2B66E0084F8FF /* MainView.m */,
+				946345721AE2B6BE0084F8FF /* PixelInfo.h */,
+				946345731AE2B6BE0084F8FF /* PixelInfo.m */,
+				946345751AE2B6D80084F8FF /* DistanceLegacy.h */,
+				946345761AE2B6D80084F8FF /* DistanceLegacy.m */,
+				946345781AE2B6EB0084F8FF /* ImageHandler.h */,
+				946345791AE2B6EB0084F8FF /* ImageHandler.m */,
+				9463457B1AE2B6FC0084F8FF /* SelectedRegion.h */,
+				9463457C1AE2B6FC0084F8FF /* SelectedRegion.m */,
 			);
 			path = ImageInpainting_GIT;
 			sourceTree = "<group>";
@@ -219,9 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9463457D1AE2B6FC0084F8FF /* SelectedRegion.m in Sources */,
 				9463454F1AE2B1B30084F8FF /* ViewController.m in Sources */,
+				946345711AE2B66E0084F8FF /* MainView.m in Sources */,
 				9463454C1AE2B1B30084F8FF /* AppDelegate.m in Sources */,
+				946345771AE2B6D80084F8FF /* DistanceLegacy.m in Sources */,
 				946345491AE2B1B30084F8FF /* main.m in Sources */,
+				9463457A1AE2B6EB0084F8FF /* ImageHandler.m in Sources */,
+				946345741AE2B6BE0084F8FF /* PixelInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
