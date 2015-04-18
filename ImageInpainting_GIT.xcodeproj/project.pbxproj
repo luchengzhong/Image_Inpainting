@@ -19,6 +19,7 @@
 		946345771AE2B6D80084F8FF /* DistanceLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345761AE2B6D80084F8FF /* DistanceLegacy.m */; };
 		9463457A1AE2B6EB0084F8FF /* ImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 946345791AE2B6EB0084F8FF /* ImageHandler.m */; };
 		9463457D1AE2B6FC0084F8FF /* SelectedRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9463457C1AE2B6FC0084F8FF /* SelectedRegion.m */; };
+		9463457F1AE2B7E50084F8FF /* Bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9463457E1AE2B7E50084F8FF /* Bg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		946345791AE2B6EB0084F8FF /* ImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHandler.m; sourceTree = "<group>"; };
 		9463457B1AE2B6FC0084F8FF /* SelectedRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedRegion.h; sourceTree = "<group>"; };
 		9463457C1AE2B6FC0084F8FF /* SelectedRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedRegion.m; sourceTree = "<group>"; };
+		9463457E1AE2B7E50084F8FF /* Bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		946345451AE2B1B30084F8FF /* ImageInpainting_GIT */ = {
 			isa = PBXGroup;
 			children = (
+				9463457E1AE2B7E50084F8FF /* Bg.jpeg */,
 				9463454A1AE2B1B30084F8FF /* AppDelegate.h */,
 				9463454B1AE2B1B30084F8FF /* AppDelegate.m */,
 				9463454D1AE2B1B30084F8FF /* ViewController.h */,
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9463457F1AE2B7E50084F8FF /* Bg.jpeg in Resources */,
 				946345521AE2B1B40084F8FF /* Main.storyboard in Resources */,
 				946345571AE2B1B40084F8FF /* LaunchScreen.xib in Resources */,
 				946345541AE2B1B40084F8FF /* Images.xcassets in Resources */,
