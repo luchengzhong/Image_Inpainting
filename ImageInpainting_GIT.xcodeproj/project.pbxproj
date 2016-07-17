@@ -96,7 +96,6 @@
 		946345451AE2B1B30084F8FF /* ImageInpainting_GIT */ = {
 			isa = PBXGroup;
 			children = (
-				94E27C3C1D3BBCCC0052A26F /* Images */,
 				9463454A1AE2B1B30084F8FF /* AppDelegate.h */,
 				9463454B1AE2B1B30084F8FF /* AppDelegate.m */,
 				9463454D1AE2B1B30084F8FF /* ViewController.h */,
@@ -143,13 +142,6 @@
 				946345611AE2B1B40084F8FF /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		94E27C3C1D3BBCCC0052A26F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
