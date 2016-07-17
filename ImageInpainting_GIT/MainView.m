@@ -14,7 +14,9 @@
 @property BOOL isEnd;
 @end
 
-@implementation MainView
+@implementation MainView{
+    UIActivityIndicatorView *spinner;
+}
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -23,14 +25,28 @@
         //_lineWidth = 10.0f;
         // _lineColor = [UIColor redColor];
         _width=12;
-        UIImage *myImageObj = [UIImage imageNamed:@"Bg.jpeg"];
-        _myImage =myImageObj;
-        _regionInfo = [[SelectedRegion alloc] init];
-        [_regionInfo initialWithSize:_myImage.size.width Height:_myImage.size.height];
+        UIImage *myImageObj = [UIImage imageNamed:@"BG_1"];
+        
+        [self setImage:myImageObj];
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat spinnerSize = 50;
+        spinner = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(screenRect.size.width/2-spinnerSize/2,
+                                                                           screenRect.size.height/2-spinnerSize/2,
+                                                                           spinnerSize,spinnerSize)];
+        spinner.color = [UIColor whiteColor];
+        spinner.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:spinner];
+        
     }
     return self;
 }
 
+-(void)setImage:(UIImage*)image{
+    _myImage =image;
+    _regionInfo = [[SelectedRegion alloc] init];
+    [_regionInfo initialWithSize:_myImage.size.width Height:_myImage.size.height];
+}
 - (void)drawRect:(CGRect)rect
 {
     /*UIBezierPath* p = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100,100,100,100)];
@@ -79,7 +95,7 @@
      
      CGContextDrawImage(cgcnt, therect, imageRef);
      imagedata =CGBitmapContextGetData(cgcnt);
-     //  imagedata = CGBitmapContextGetData(cgcnt);//这句不知道要不要，求高手指点
+     //  imagedata = CGBitmapContextGetData(cgcnt);//
      
      //    释放资源
      //CGColorSpaceRelease(colorSpace);
@@ -138,12 +154,20 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //UIImage *myImageObj = [UIImage imageNamed:@"Bg.jpeg"];
-    _myImage = [self recaculateImage:_myImage MaskRegion:_regionInfo];
-    _isEnd=true;
-    [self setNeedsDisplay];
-    _regionInfo = [[SelectedRegion alloc] init];
-    [_regionInfo initialWithSize:_myImage.size.width Height:_myImage.size.height];
+    [spinner startAnimating];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        //UIImage *myImageObj = [UIImage imageNamed:@"Bg.jpeg"];
+        _myImage = [self recaculateImage:_myImage MaskRegion:_regionInfo];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _isEnd=true;
+            
+            [self setNeedsDisplay];
+            [self setImage:_myImage];
+            
+            [spinner stopAnimating];
+        });
+    });
+    
 }
 
 - (UIImage*)recaculateImage:(UIImage*) sourceImage MaskRegion:(SelectedRegion*) region{
