@@ -1,7 +1,6 @@
 # Image Inpainting
 
 An algorithm help you remove stamps in images.
-
 ## Demo
 <p align="center">
 <img src="https://github.com/luchengzhong/Image_Inpainting/blob/master/READ_ME_IMAGES/image_1.gif" width="330">
@@ -64,4 +63,6 @@ When we calculate the Euclidian distance between the grey pixel and the blue pix
 <br></br>
 It’s better to restore the calculate result of each column when implementing this feature. Since with the growth of layer level, new columns will be add in and old columns will be removed. The implementation is complicate since we need to restore different calculation legacy for each pixel row and each candidate row.
 <br></br>
+## Warning
 
+Existing bugs: may crash if you select border or a large scare of area. Will be fixed along with some new features
